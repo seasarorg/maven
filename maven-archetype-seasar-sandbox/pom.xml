@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.seasar.maven.archetypes</groupId>
+  <artifactId>maven-archetype-seasar-sandbox</artifactId>
+  <version>0.0.1</version>
+  <packaging>maven-plugin</packaging>
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>maven.seasar.org</id>
+      <name>The Seasar Project Maven2 Repository</name>
+      <url>scp://maven.seasar.org/home/groups/maven/maven/maven2</url>
+    </repository>
+  </distributionManagement>
+</project>

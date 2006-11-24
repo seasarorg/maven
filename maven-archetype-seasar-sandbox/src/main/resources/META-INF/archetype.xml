@@ -1,0 +1,20 @@
+<archetype>
+  <id>sandbox-java</id>
+  <sources>
+    <source>src/main/java/App.java</source>
+  </sources>
+  <testSources>
+    <source>src/test/java/AppTest.java</source>
+  </testSources>
+  <resources>
+    <resource>.classpath</resource>
+    <resource>.project</resource>
+    <resource>src/main/resources/resource.txt</resource>
+  </resources>
+  <testResources>
+    <resource>src/test/resources/resource.txt</resource>
+  </testResources>
+  <siteResources>
+    <resource>src/site/site.xml</resource>
+  </siteResources>
+</archetype>
