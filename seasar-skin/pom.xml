@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?><project>
   <modelVersion>4.0.0</modelVersion>
+
+  <!-- The Basics -->
   <groupId>org.seasar.project</groupId>
   <artifactId>seasar-skin</artifactId>
-  <name>Seasar Foundation Project Site Skin</name>
   <version>0.1.1</version>
+
+  <!-- More Project Information -->
+  <name>Seasar Foundation Project Site Skin</name>
   <description>This is a site skin for projects on the Seasar Foundation.</description>
+
+  <!-- Environment Settings -->
   <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
       <id>maven.seasar.org</id>
       <name>The Seasar Foundation Maven2 Repository</name>
-      <url>scp://maven.seasar.org/home/groups/maven/public_html/maven2</url>
+      <url>dav:https://www.seasar.org/maven/maven2</url>
     </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>maven.seasar.org</id>
+      <name>The Seasar Foundation Maven2 Snapshot Repository</name>
+      <url>dav:https://www.seasar.org/maven/maven2-snapshot</url>
+    </snapshotRepository>
   </distributionManagement>
+
+  <!-- Build Settings -->
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav</artifactId>
+      </extension>
+    </extensions>
+  </build>
 </project>
