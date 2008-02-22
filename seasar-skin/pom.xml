@@ -3,7 +3,7 @@
   <groupId>org.seasar.project</groupId>
   <artifactId>seasar-skin</artifactId>
   <name>Seasar Foundation Project Site Skin</name>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <description>This is a site skin for projects on the Seasar Foundation.</description>
   <distributionManagement>
     <repository>
