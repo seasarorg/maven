@@ -132,3 +132,21 @@ div.clear hr{
   padding: 0px;
   border: 0px solid #999;
 }
+
+div.caution {
+  border: solid thin red;
+  margin: 0px 0px 5px;
+}
+
+div.caution div {
+  color: white;
+  background-color: red;
+  font-weight: bold;
+  font-size: larger;
+  padding: 5px;
+  margin: 0px 0px 5px;
+}
+
+div.caution p {
+  margin: 0px 10px 0px;
+}
