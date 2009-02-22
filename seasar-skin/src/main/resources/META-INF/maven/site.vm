@@ -140,20 +140,29 @@
 #end
 
 #macro ( copyright )
-  &copy; Copyright
+  &copy; Copyright 
   #if ( $project )
-    #set ( $currentYear = ${currentDate.year} + 1900 )
+    #if ( ${project.organization} && ${project.organization.name} )
+      #if ( ${project.organization.url} )
+        <a href="${project.organization.url}">${project.organization.name}</a>.
+      #else
+        ${project.organization.name}.
+      #end
+      and the others
+    #end
 
+    #set ( $currentYear = ${currentDate.year} + 1900 )
     #if ( ${project.inceptionYear} && ( ${project.inceptionYear} != ${currentYear.toString()} ) )
       ${project.inceptionYear}-${currentYear},
     #else
       ${currentYear},
     #end
-
-    #if ( ${project.organization} && ${project.organization.name} )
-      ${project.organization.name} and the others. All rights reserved.
-    #end
+  #else
+    #set ( $currentYear = ${currentDate.year} + 1900 )
+    ${currentYear},
   #end
+  all rights reserved.
+  <a href="http://www.seasar.org">The Seasar Project</a>.
 #end
 
 #macro ( publishDate $position $publishDate $version )
@@ -294,7 +303,7 @@
 
 <div class="line"><span class="hide">spacer</span></div>
 
-<div id="logo"><h1 id="h01" class="hide">The Seasar Foundation Project Site</h1><img src="http://www.seasar.org/images/seasar_logo_blue.gif" alt="The Seasar Foundation" width="390" height="180" /></div>
+<div id="logo"><h1 id="h01" class="hide">The Seasar Project</h1><a href="http://www.seasar.org/" alt="The Seasar Project" title="The Seasar Project"><img src="http://www.seasar.org/images/seasar_logo_blue.gif" alt="The Seasar Project" width="390" height="180" /></a></div>
 
 <div id="tool">
 
@@ -310,13 +319,13 @@
 </form>
 
 <h2>Seasar Banner</h2>
-
-<p><a href="http://www.seasar.org/images/seasar_banner.gif"><img src="http://www.seasar.org/images/seasar_banner.gif" alt="Seasar Banner" title="Seasar Banner" width="146" height="33" /></a></p>
+#banner( $decoration.bannerLeft "bannerLeft" )
 
 </div>
 
 <div id="navi">
-<p><a href="$relativePath/../en/">English</a> | <a href="$relativePath/../ja/">Japanese</a></p>
+	<p id="navi_left">#breadcrumbs( $decoration.body.breadcrumbs )</p>
+	<p id="navi_right"><a href="$relativePath/../en/">English</a> | <a href="$relativePath/../ja/">Japanese</a></p>
 </div>
 
 </div><!-- header -->
