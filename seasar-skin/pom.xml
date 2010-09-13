@@ -4,7 +4,7 @@
   <!-- The Basics -->
   <groupId>org.seasar.project</groupId>
   <artifactId>seasar-skin</artifactId>
-  <version>0.1.3</version>
+  <version>0.1.4</version>
 
   <!-- More Project Information -->
   <name>Seasar Foundation Project Site Skin</name>
